@@ -471,7 +471,8 @@ msg() {
     if [ $# -gt 1 ]; then
       MESSAGE="$1"
       COLOR="$2"
-    else
+    elif [ $# -eq 1 ]; then
+      MESSAGE="$1"
       COLOR="$DEFAULT"
     fi
     if has_value "MESSAGE"; then
