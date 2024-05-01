@@ -467,13 +467,13 @@ log_passed() {
 ## @param message Message to display.
 ## @param color Text color.
 msg() {
-    MESSAGE="$1"
-    COLOR="$2"
-
-    if ! has_value COLOR; then
-        COLOR="$DEFAULT"
+    # test arguments number first. otherwise set -u may fail here.
+    if [ $# -gt 1 ]; then
+      MESSAGE="$1"
+      COLOR="$2"
+    else
+      COLOR="$DEFAULT"
     fi
-
     if has_value "MESSAGE"; then
         $COLOR
         echo "$MESSAGE"
