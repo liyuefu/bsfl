@@ -174,6 +174,17 @@ start_with() {
 }
 
 # ---
+# Category: Condition
+# Since: 0.3.1
+# Usage: end_with <string> <match>
+# Description: Return 0 (true) or 1 (false). This function should never throw exception error.
+# ---
+
+end_with() {
+  [[ $1 =~ "$2"$ ]]
+}
+
+# ---
 # Category: string
 # Usage: extract <string> <start-string> <end-string>
 # Description: Return string between <start-string> and <end-string> .
