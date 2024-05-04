@@ -174,6 +174,9 @@ start_with() {
 }
 
 # ---
+# Category: string
+# Usage: extract <string> <start-string> <end-string>
+# Description: Return string between <start-string> and <end-string> .
 # ---
 
 extract()
